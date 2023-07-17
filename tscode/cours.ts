@@ -100,3 +100,52 @@ let perso5 : {
 }= {name: "truc", age: 94, action: (choice: string)=>console.log("actions : " + choice)};
 
 perso5.action("blabla");
+
+
+
+
+export class Vehicule{
+    static nbRoues: number;
+    private /*readonly*/ marque: string;
+    
+    constructor(nbRoues : number, marque : string){
+        nbRoues = nbRoues;
+        this.marque = marque;
+    }
+
+    public getMarque(): string{
+        return this.marque;
+    }
+
+    public setMarque(marque: string){
+        this.marque = marque;
+    }
+   /* addAttribut(truc: string){
+        this.truc = truc;
+    }*/
+}
+export class Voiture extends Vehicule{}
+
+let vehicules: Vehicule[] = [];
+
+
+vehicules.push(new Voiture(4, "toyota"));
+vehicules.push(new Voiture(4, "renault"));
+console.log(vehicules);
+
+let v1 = new Voiture(4, "MarqueV1");
+let v2 = new Voiture(2, "Mar queV2");
+console.log();
+
+
+
+/*
+
+let Modele {
+    roues : number,
+    marque : string
+};
+let m = new Modele(roues: 2, marque : "yamaha");
+
+let voiture : modele[] = [];*/
+
