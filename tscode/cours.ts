@@ -58,8 +58,45 @@ dataTuple.push(4);
 enum day {Lundi = "monday", Mardi = "Tuesday"};
 
 let d = new Date();
-console.log(d);
- 
 
-console.log(d);
 
+/*
+function add2 (a: number, b?: number) : number{
+	return a +  (b || 2 //astuce JS à éviter);
+}*/
+
+function add2(a: number, b: number = 2) : number{
+    return a + b;
+}
+
+console.log(add2(1, 75));
+
+
+let perso = {name: "truc"};
+// perso.age = 94; possible en JS mais pas en TS
+
+let perso2 = {
+    name: "truc",
+    age: 94
+}
+
+let perso3 : {
+    name: string,
+    age: number
+}= {name: "truc", age: 94}
+
+let perso4 : {
+    readonly name : string,
+    age?: number
+ }= {name: "truc"}
+
+// perso4.name = "truc2"; impossible
+
+
+let perso5 : {
+    name: string,
+    age: number,
+    action: (choice: string) => void
+}= {name: "truc", age: 94, action: (choice: string)=>console.log("actions : " + choice)};
+
+perso5.action("blabla");
