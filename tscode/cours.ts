@@ -58,6 +58,8 @@ dataTuple.push(4);
 enum day {Lundi = "monday", Mardi = "Tuesday"};
 
 let d = new Date();
-d.getDay
+console.log(d);
+ 
+
 console.log(d);
 
